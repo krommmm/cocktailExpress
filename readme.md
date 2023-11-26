@@ -32,5 +32,5 @@ L'architecture est découpée en modules (fonctions, requêtes, index).
 ### lancer le serveur:
 `node server`
 
-### Lance l'application:
+### Lancer l'application:
 `npm run start`

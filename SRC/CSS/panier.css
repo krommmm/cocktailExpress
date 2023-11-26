@@ -1,0 +1,89 @@
+.panier .panier_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 95%;
+	margin-bottom: 35px;
+}
+.quantity {
+	display: none;
+}
+.panier .panier_container article {
+	display: flex;
+	width: 700px;
+	margin: 30px;
+	padding: 15px;
+	border-radius: 5px;
+}
+.panier .panier_container .image {
+	width: 200px;
+}
+.panier .panier_container .panierPageImg {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+.panier .panier_container .texte {
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	margin: 0px;
+}
+.panier .panier_container .texte p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.panier .panier_container .texte h2 {
+	line-height: 0px;
+	font-size: 40px;
+	margin: 0px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+.panier .panier_container .texte .prix {
+	font-weight: 600;
+}
+.panier .description_title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 2px;
+}
+.panier .panier_container label {
+	margin: 5px;
+}
+.panier .panier_container input,
+.panier .container select {
+	margin-top: 7.5px;
+	margin-bottom: 7.5px;
+}
+.panier .panier_container input {
+	width: 50px;
+}
+.panier .btn_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (max-width: 742px) {
+	.panier .panier_container article {
+		width: 100%;
+	}
+
+	.panier .panier_container {
+		margin-top: 162px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.panier .panier_container article {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}

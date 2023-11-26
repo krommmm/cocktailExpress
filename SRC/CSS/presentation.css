@@ -1,0 +1,41 @@
+.presentation {
+	width: 100%;
+}
+.presentation .container {
+	width: 97%;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+.presentation .container .banner_img {
+	width: 100%;
+	height: 650px;
+	object-fit: cover;
+	object-position: 0% 10%;
+	position: relative;
+}
+
+.presentation .container h2 {
+	position: absolute;
+	top: 30%;
+	font-size: 50px;
+	color: black;
+	max-width: 600px;
+	text-align: center;
+	font-size: 600;
+}
+.btn_presentation{
+    position:absolute;
+    top:55%;
+}
+
+.presentation_texte{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin: 15px;
+}
+.presentation_texte p{
+    font-size: 25px;
+    max-width: 700px;
+}

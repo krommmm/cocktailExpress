@@ -1,0 +1,92 @@
+.focus{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.focus .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 100%;
+	margin-bottom: 35px;
+}
+.focus .container article {
+	display: flex;
+
+	width: auto;
+	margin: auto;
+	padding: 15px;
+	border-radius: 5px;
+}
+.focus .container .image  {
+	width: 300px;
+	margin-right: 18px;
+	overflow: hidden;
+}
+.focus .container .image img{
+	transition-duration:1s;
+}
+.focus .container .image img:hover{
+	transform:scale(1.1);
+}
+.focus .container .focusImg {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+.focus .container .texte {
+	margin: 5px;
+	display:flex;
+	flex-direction:column;
+}
+.focus .container h2 {
+	line-height: 0px;
+	font-size: 40px;
+}
+.focus .container .texte .prix {
+	font-weight: 600;
+}
+.focus .description_title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 2px;
+	margin: 2px;
+}
+.focus .container .description_content{
+	font-size: 19px;
+	max-width: 600px;
+}
+.focus .container label {
+	margin: 5px;
+}
+.focus .container .thing{
+	margin-top: 7.5px;
+	margin-bottom: 7.5px;
+}
+.focus .container input,
+.focus .container select {
+	margin-top: 7.5px;
+	margin-bottom: 7.5px;
+	margin: auto;
+}
+.focus .container input {
+	width: 50px;
+}
+.focus .btn_container {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+
+@media screen and (max-width: 1116px){
+	.focus .container article {
+		flex-direction:column;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.focus{
+		padding-top:50px;
+	}
+}

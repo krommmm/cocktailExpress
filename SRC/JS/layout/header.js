@@ -2,7 +2,8 @@ import getAllCocktails from '../fetch/getAllCocktails';
 import obtenirDetails from '../fonctions/obtenirDetails';
 
 const header = async () => {
-	const url = 'http://localhost:2000/api/cocktails';
+	const myUrl = process.env.API_URL;
+	const url = `${myUrl}/api/cocktails`;
 
 	//nb articles
 	let isLocal = JSON.parse(localStorage.getItem('cocktails'));

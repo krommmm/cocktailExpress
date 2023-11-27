@@ -32,5 +32,8 @@ L'architecture est découpée en modules (fonctions, requêtes, index).
 ### lancer le serveur:
 `node server`
 
+### Configurer les variables d'environnements côté front : 
+> A la racine du projet, dans le fichier webpack.config.js : changer l'url/port dans plugins
+
 ### Lancer l'application:
 `npm run start`

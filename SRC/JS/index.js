@@ -11,10 +11,15 @@ import getOneCocktails from './fetch/getOneCocktails';
 import modifyQuantity from './fonctions/modifyQuantity';
 import getUrl from './fonctions/getUrl';
 
+const myUrl = process.env.API_URL;
+
 header();
 footer();
 
-const adresse = 'http://localhost:2000/api/cocktails';
+
+
+
+const adresse = `${myUrl}/api/cocktails`;
 
 if (document.title === 'CocktailExpress Accueil') {
 	(async () => {
@@ -26,7 +31,7 @@ if (document.title === 'CocktailExpress Accueil') {
 if (document.title === 'Cocktail express zoom') {
 	let id = getUrl();
 	(async () => {
-		const adresse2 = `http://localhost:2000/api/cocktails/${id}`;
+		const adresse2 = `${myUrl}/api/cocktails/${id}`;
 		let result = await getOneCocktails(adresse2);
 		afficherUnCocktail(result);
 	})();

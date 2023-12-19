@@ -62,7 +62,7 @@ document.addEventListener('click', (event) => {
 });
 
 document.addEventListener('click', async (event) => {
-	if (event.target.getAttribute('class') === 'input_panier') {
+	if (event.target.classList.contains('input_panier')) {
 		modifyQuantity(event);
 		let result = await getAllCocktails(adresse);
 		let details = obtenirDetails(result);

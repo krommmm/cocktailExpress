@@ -4,7 +4,7 @@ const getAllCocktails = async (url) => {
 		const resultToJson = await result.json();
 		return resultToJson; 
 	} catch (err) {
-		console.log(`Il y a eu une erreur : ${err}`);
+		console.error(`Il y a eu une erreur : ${err}`);
 	}
 };
 export default getAllCocktails;

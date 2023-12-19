@@ -16,9 +16,6 @@ const myUrl = process.env.API_URL;
 header();
 footer();
 
-
-
-
 const adresse = `${myUrl}/api/cocktails`;
 
 if (document.title === 'CocktailExpress Accueil') {

@@ -1,4 +1,4 @@
-import getAllCocktails from "../fetch/getAllCocktails";
+import getAllCocktails from "../services/getAllCocktails";
 
 
 const supprimerUnCocktail = async (e,url) => {

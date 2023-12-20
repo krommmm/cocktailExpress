@@ -6,43 +6,42 @@ import ajoutPanier from './fonctions/ajoutPanier';
 import obtenirDetails from './fonctions/obtenirDetails';
 import afficherPanier from './fonctions/afficherPanier';
 import supprimerUnCocktail from './fonctions/supprimerUnCocktail';
-import getAllCocktails from './fetch/getAllCocktails';
-import getOneCocktails from './fetch/getOneCocktails';
+import getAllCocktails from './services/getAllCocktails';
+import getOneCocktails from './services/getOneCocktails';
 import modifyQuantity from './fonctions/modifyQuantity';
 import getUrl from './fonctions/getUrl';
+import accueil from './pages/accueil';
+import panier from './pages/panier';
+import zoom from './pages/zoom';
+import getPageName from './utils/getPageName';
 
-const myUrl = process.env.API_URL;
+const MY_URL = process.env.API_URL;
 
 header();
 footer();
 
-const adresse = `${myUrl}/api/cocktails`;
+const adresse = `${MY_URL}/api/cocktails`;
 
-if (document.title === 'CocktailExpress Accueil') {
-	(async () => {
-		let result = await getAllCocktails(adresse);
-		afficherCocktails(result);
-	})();
+// ROUTAGE
+let pageName = getPageName();
+switch (pageName) {
+	case 'index':
+		accueil();
+		break;
+	case '':
+		accueil();
+	case 'focus':
+		zoom();
+		break;
+	case 'panier':
+		panier();
+		break;
+
+	default:
+		console.error('Page not found');
 }
 
-if (document.title === 'Cocktail express zoom') {
-	let id = getUrl();
-	(async () => {
-		const adresse2 = `${myUrl}/api/cocktails/${id}`;
-		let result = await getOneCocktails(adresse2);
-		afficherUnCocktail(result);
-	})();
-}
-
-if (document.title === 'Cocktail express panier') {
-	(async () => {
-		let result = await getAllCocktails(adresse);
-		let details = obtenirDetails(result);
-		afficherPanier(details);
-		header();
-	})();
-}
-
+// ADDEVENTLISTENER
 document.addEventListener('click', (event) => {
 	if (event.target.getAttribute('id') === 'btn_focus') {
 		const clickedElement = event.target;

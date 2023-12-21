@@ -1,5 +1,5 @@
 import getAllCocktails from '../services/getAllCocktails';
-import afficherCocktails from '../fonctions/afficherCocktails';
+import afficherCocktails from '../components/afficherCocktails';
 
 const accueil = () => {
 	const myUrl = process.env.API_URL;

@@ -1,6 +1,6 @@
 import getOneCocktails from '../services/getOneCocktails';
-import afficherUnCocktail from '../fonctions/afficherUnCocktail';
-import getUrl from '../fonctions/getUrl';
+import afficherUnCocktail from '../components/afficherUnCocktail';
+import getUrl from '../utils/getUrl';
 
 const zoom = () => {
 	const MY_URL = process.env.API_URL;

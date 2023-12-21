@@ -1,5 +1,5 @@
 import getAllCocktails from '../services/getAllCocktails';
-import obtenirDetails from '../fonctions/obtenirDetails';
+import obtenirDetails from '../components/obtenirDetails';
 
 const header = async () => {
 	const myUrl = process.env.API_URL;

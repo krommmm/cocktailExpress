@@ -1,6 +1,6 @@
 import getAllCocktails from '../services/getAllCocktails';
-import obtenirDetails from '../fonctions/obtenirDetails';
-import afficherPanier from '../fonctions/afficherPanier';
+import obtenirDetails from '../components/obtenirDetails';
+import afficherPanier from '../components/afficherPanier';
 import header from '../layout/header';
 
 const panier = () => {
